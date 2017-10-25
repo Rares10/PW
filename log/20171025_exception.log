@@ -1,0 +1,2 @@
+*ERROR* 	2017/10/25 - 11:48:42: Link to database cannot be established:SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/Applications/AMPPS/var/mysql.sock' (2) at line 102 in file classes/db/DbPDO.php
+*ERROR* 	2017/10/25 - 11:48:42: Link to database cannot be established:SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/Applications/AMPPS/var/mysql.sock' (2) at line 102 in file classes/db/DbPDO.php

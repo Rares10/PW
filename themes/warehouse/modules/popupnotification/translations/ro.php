@@ -1,0 +1,33 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{popupnotification}warehouse>popupnotification_ee936b86c6ec8ee44d7575e350bb54e7'] = 'Conectare cu Facebook';
+$_MODULE['<{popupnotification}warehouse>popupnotification_181c0f6d685b01225c997fbea648e40b'] = 'Conectare cu Twitter';
+$_MODULE['<{popupnotification}warehouse>popupnotification_4df84faaf44e159a5ad76e1cb7699880'] = 'Conectare cu Google+';
+$_MODULE['<{popupnotification}warehouse>popupnotification_e88613e4b36a3167871faf95dd84feb2'] = 'Vrei DISCOUNT la acest produs ?';
+$_MODULE['<{popupnotification}warehouse>popupnotification_3f522a6f70caa150c2fded1a85d192de'] = 'Inregistreaza-te pentru a primi stiri si oferte';
+$_MODULE['<{popupnotification}warehouse>popupnotification_bc910f8bdf70f29374f496f05be0330c'] = 'Prenume';
+$_MODULE['<{popupnotification}warehouse>popupnotification_77587239bf4c54ea493c7033e1dbf636'] = 'Nume';
+$_MODULE['<{popupnotification}warehouse>popupnotification_643a860f992333b8600ea264aca7c4fc'] = 'Adresa de email';
+$_MODULE['<{popupnotification}warehouse>popupnotification_985a4b720f9b50ee8ed90a41488d2bb7'] = 'Termeni si conditii';
+$_MODULE['<{popupnotification}warehouse>popupnotification_adcccbf1195a4c6b11a440595644ab14'] = 'Sunt de acord';
+$_MODULE['<{popupnotification}warehouse>popupnotification_b26917587d98330d93f87808fc9d7267'] = 'Vreau Discount';
+$_MODULE['<{popupnotification}warehouse>popupnotification_2fdfd506efea08144c0794c32ca8250a'] = 'Creaza cont';
+$_MODULE['<{popupnotification}warehouse>popupnotification_1e067ac485fd2a9edad9f1b50e3a13f8'] = 'Login';
+$_MODULE['<{popupnotification}warehouse>popupnotification_4db61af3a5a290a3569fcb0c2503211b'] = 'Login';
+$_MODULE['<{popupnotification}warehouse>popupnotification_3a2d5fe857d8f9541136a124c2edec6c'] = 'Sau';
+$_MODULE['<{popupnotification}warehouse>popupnotification_901b5de59fc1de0ef996233b55584d4a'] = 'adauga datele contului tau';
+$_MODULE['<{popupnotification}warehouse>popupnotification_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'Email';
+$_MODULE['<{popupnotification}warehouse>popupnotification_dc647eb65e6711e155375218212b3964'] = 'Parola';
+$_MODULE['<{popupnotification}warehouse>popupnotification_0ba7583639a274c434bbe6ef797115a4'] = 'Intra in cont';
+$_MODULE['<{popupnotification}warehouse>popupnotification_99dea78007133396a7b8ed70578ac6ae'] = 'Login';
+$_MODULE['<{popupnotification}warehouse>popupnotification_0500400382929f6a236cc9c201affb33'] = 'adauga datele contului tau';
+$_MODULE['<{popupnotification}warehouse>popupnotification_e7115c36c576e92587f81766ecaaef2f'] = 'Nu ai cont ?';
+$_MODULE['<{popupnotification}warehouse>popupnotification_1aa668d559a3a32a44796aeee6978a59'] = 'Creaza cont nou';
+$_MODULE['<{popupnotification}warehouse>popupnotification_598a2830267414671ff9a602f8f46574'] = 'Ai uitat';
+$_MODULE['<{popupnotification}warehouse>popupnotification_36365720e8d868fe83f74f251f639eed'] = 'Recupereaza Parola';
+$_MODULE['<{popupnotification}warehouse>popupnotification_1397ec797c2dd1d64e0d45d93dbb605a'] = 'Adauga datele contului tau:';
+$_MODULE['<{popupnotification}warehouse>popupnotification_b90f0c0419559db56d70e978f8712a6d'] = 'Logheaza-te cu:';
+$_MODULE['<{popupnotification}warehouse>popupnotification_54f0f324f770292d8085bd2b5e944648'] = 'Login';
+$_MODULE['<{popupnotification}warehouse>popupnotification_2c5b50ecd39d5a72f628c4b2c35cb40a'] = 'Codul de Discount';
