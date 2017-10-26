@@ -1,0 +1,33 @@
+MAGAZIN ONLINE CU PRODUSE APPLE
+
+CERINTE:
+
+-site-ul trebuie sa afiseze toate produsele disponibile la acel moment, iar la selectarea unui produs apare o noua pagina ce contine detaliile despre acel produs, review-uri si pretul
+
+-site-ul poate sorta produsele dupa mai multe categorii sau filtre alese de client
+
+-ofera o interfata user friendly 
+
+-pentru a comanda un produs, clientul trebuie sa aiba un cont creat pe site si astfel isi poate plasa produsele dorite in cosul de cumparaturi.
+
+-cosul de cumparaturi va afisa produsele selectate de client si pretul total.
+
+-clientul poate renunta la anumite produse chiar daca le-a adaugat in cos sau poate modifica cantitatea.
+
+-Pentru a finaliza comanda se vor cere datele personale si de livrare ale clientului.
+
+-Comenzile se vor vedea intr-un meniu specific fiecariu client numit "Comenzile mele". 
+
+SPECIFICATII:
+
+-pentru afisarea produselor se foloseste un meniu utilizand HTML si CSS.
+
+-sortarea si filtrarea se va face folosind scripturi.
+
+-interfata va fi cat mai usor de folosit de catre client cu butoane si submeniuri implementate in HTML.
+
+-pentru creearea de conturi pe site, se folosesc formulare cu casute text pentru date si un buton de CREEARE CONT. Acestea se vor stoca intr-o baza de date. 
+
+-cosul de cumparaturi cu produse se stocheaza tot in baza de date care va avea pentru fiecare client un tabel de produse.
+
+-Comenzile fiecarui client se pastreaza intr-un tabel html si se vor lua din baza de date.
