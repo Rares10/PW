@@ -14,13 +14,13 @@ fclose($update_log);
 $update_count = 0;
 $Products = array();
 $Rules = array();
-$qs = $dbh->query("SELECT DISTINCT id_supplier FROM red_price_rules WHERE supplier_name = 'NOD'") or die (error_log('[' . date('r') . '] . ERROR: MySQL Error: ' . $dbh->error . ' in file ' . __FILE__ . ', line ' . __LINE__ . "\n", 3, dirname(__FILE__) . '/error.log'));
+$qs = $dbh->query("SELECT DISTINCT id_supplier FROM price_rules WHERE supplier_name = 'NOD'") or die (error_log('[' . date('r') . '] . ERROR: MySQL Error: ' . $dbh->error . ' in file ' . __FILE__ . ', line ' . __LINE__ . "\n", 3, dirname(__FILE__) . '/error.log'));
 $rs = $qs->fetch_assoc();
 if (is_null($rs)) {
 	error_log('[' . date('Y-m-d H:i:s') . '] - ERROR: Nu a fost gasit nici un furnizor cu numele NOD in tabelul cu regulile de pret (price_rules).' . "\n", 3, dirname(__FILE__) . '/error.log');
 } else {
 	$id_supplier = $rs['id_supplier'];
-	$qr = $dbh->query("SELECT id_supplier, id_category, id_manufacturer, adaos FROM red_price_rules WHERE id_supplier = " . $id_supplier) or die (error_log('[' . date('Y-m-d H:i:s') . '] . ERROR: MySQL Error: ' . $dbh->error . ' in file ' . basename(__FILE__) . ', line ' . __LINE__ . "\n", 3, dirname(__FILE__) . '/error.log'));
+	$qr = $dbh->query("SELECT id_supplier, id_category, id_manufacturer, adaos FROM price_rules WHERE id_supplier = " . $id_supplier) or die (error_log('[' . date('Y-m-d H:i:s') . '] . ERROR: MySQL Error: ' . $dbh->error . ' in file ' . basename(__FILE__) . ', line ' . __LINE__ . "\n", 3, dirname(__FILE__) . '/error.log'));
 	while ($rr = $qr->fetch_assoc()) {
 		$Rules[$rr['id_manufacturer']][$rr['id_category']] = $rr['adaos'];
 	}
@@ -61,13 +61,13 @@ if (is_null($rs)) {
 			$NewPrice = round( $New["$ProductKey"]['price']*(1+$ProductData['adaos']), 2);
 			$NewQuantity = intval($New["$ProductKey"]['quantity']);
 			if ($NewPrice != $ProductData['price'] || $NewQuantity != $ProductData['quantity']) {
-				$dbh->query("UPDATE red_product INNER JOIN red_product_shop ON red_product.id_product = red_product_shop.id_product INNER JOIN red_stock_available ON red_product.id_product = red_stock_available.id_product SET red_product.price = " . $NewPrice . ", red_product.quantity = " . $NewQuantity . ", red_stock_available.quantity = " . $NewQuantity . ", red_product_shop.price = " . $NewPrice . " WHERE red_product.id_product = " . $ProductData['id_product']) or die (error_log('[' . date('Y-m-d H:i:s') . '] . ERROR: MySQL Error: ' . $dbh->error . ' in file ' . basename(__FILE__) . ', line ' . __LINE__ . "\n", 3, dirname(__FILE__) . '/error.log'));
+				$dbh->query("UPDATE ps_product INNER JOIN ps_product_shop ON ps_product.id_product = ps_product_shop.id_product INNER JOIN ps_stock_available ON ps_product.id_product = ps_stock_available.id_product SET ps_product.price = " . $NewPrice . ", ps_product.quantity = " . $NewQuantity . ", ps_stock_available.quantity = " . $NewQuantity . ", ps_product_shop.price = " . $NewPrice . " WHERE ps_product.id_product = " . $ProductData['id_product']) or die (error_log('[' . date('Y-m-d H:i:s') . '] . ERROR: MySQL Error: ' . $dbh->error . ' in file ' . basename(__FILE__) . ', line ' . __LINE__ . "\n", 3, dirname(__FILE__) . '/error.log'));
 				$update_count++;
 				$update_log_line = 'Update for id_product ' . $ProductData['id_product'] . ': ' . $NewPrice . '=' . $New["$ProductKey"]['price'] . '*' . (1+$ProductData['adaos']) . "\n";
 				error_log($update_log_line, 3, dirname(__FILE__) . '/update_nod.log');
 			}
 		} else {
-			$dbh->query("UPDATE red_product INNER JOIN red_stock_available ON red_product.id_product = red_stock_available.id_product SET red_product.quantity = 0, red_stock_available.quantity = 0 WHERE red_product.id_product = " . $ProductData['id_product']) or die ('MySQL Error: ' . $dbh->error . ' in file ' . basename(__FILE__) . ', line ' . __LINE__);
+			$dbh->query("UPDATE ps_product INNER JOIN ps_stock_available ON ps_product.id_product = ps_stock_available.id_product SET ps_product.quantity = 0, ps_stock_available.quantity = 0 WHERE ps_product.id_product = " . $ProductData['id_product']) or die ('MySQL Error: ' . $dbh->error . ' in file ' . basename(__FILE__) . ', line ' . __LINE__);
 		}
 	}
 }
